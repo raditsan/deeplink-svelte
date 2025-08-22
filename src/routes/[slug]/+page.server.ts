@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
-import type { LoadResult, PostModel } from '$lib/types/types';
-import { posts } from '$lib/data/posts';
+import type { LoadResult, PostModel } from '$lib';
+import { posts } from '$lib';
+
 const scheme = import.meta.env.VITE_SCHEME;
 
 export function load({ params, url }): LoadResult {
