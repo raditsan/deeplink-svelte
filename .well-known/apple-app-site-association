@@ -1,0 +1,34 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "ABTDFQ339U.id.co.pegadaian.digital",
+        "paths": [
+          "/validateemail",
+          "/promo",
+          "/validatevideocall",
+          "/changepassword"
+        ]
+      },
+      {
+        "appID": "ABTDFQ339U.id.co.pegadaian.digital.uat",
+        "paths": [
+          "/validateemail",
+          "/promo",
+          "/validatevideocall",
+          "/changepassword"
+        ]
+      },
+      {
+        "appID": "ABTDFQ339U.id.co.pegadaian.digital.develop",
+        "paths": [
+          "/validateemail",
+          "/promo",
+          "/validatevideocall",
+          "/changepassword"
+        ]
+      }
+    ]
+  }
+}

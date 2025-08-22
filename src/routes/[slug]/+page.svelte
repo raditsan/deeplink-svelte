@@ -9,5 +9,5 @@
 	<h1>{data.post.title}</h1>
 	<p>{data.post.description}</p>
 
-	<a href={data.deeplinkUrl} class="button-link">Buka Aplikasi Dash!</a>
+	<a href={data.deeplinkUrl} class="button-link">{data.post.button}</a>
 </div>
