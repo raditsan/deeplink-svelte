@@ -1,38 +1,126 @@
-# sv
+# 🚀 SvelteKit Project – Tring!
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Project ini menggunakan **SvelteKit + Vite**.  
+Dokumen ini menjelaskan cara menjalankan (run) dan build project dengan berbagai environment (**development**, **UAT**, dan **production**).
 
-## Creating a project
+---
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 📦 Persiapan
 
-```sh
-# create a new project in the current directory
-npx sv create
+1. Clone repository ini:
+   ```bash
+   git clone <repo-url>
+   cd <repo-folder>
+   ```
 
-# create a new project in my-app
-npx sv create my-app
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+---
+
+## ⚙️ Environment
+
+Gunakan file `.env` sesuai environment:
+
+- `.env.development`
+- `.env.uat`
+- `.env.production`
+
+Contoh isi file:
+
+```env
+# .env.development
+VITE_SCHEME=dash-dev://
+VITE_API_URL=https://dev-api.example.com
+
+# .env.uat
+VITE_SCHEME=dash-uat://
+VITE_API_URL=https://uat-api.example.com
+
+# .env.production
+VITE_SCHEME=dash://
+VITE_API_URL=https://api.example.com
 ```
 
-## Developing
+> Semua variabel yang akan dipakai di client **harus diawali** dengan `VITE_`.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+---
 
-```sh
+## ▶️ Menjalankan Project
+
+### Development
+```bash
 npm run dev
+```
+Menjalankan server dengan **.env.development**.  
+Default URL: `http://localhost:5173`
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+### UAT
+```bash
+npm run dev:uat
+```
+Menjalankan server dengan **.env.uat**.  
+Default URL: `http://localhost:5173`
+
+### Production (mode prod di dev server)
+```bash
+npm run dev:prod
+```
+Menjalankan server dengan **.env.production**.  
+Default URL: `http://localhost:5173`
+
+---
+
+## 🛠️ Build Project
+
+### Build Development
+```bash
+npm run build:dev
 ```
 
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
+### Build UAT
+```bash
+npm run build:uat
 ```
 
-You can preview the production build with `npm run preview`.
+### Build Production
+```bash
+npm run build:prod
+```
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Hasil build akan tersedia di folder `build/`.
+
+---
+
+## 👀 Preview Hasil Build
+
+Setelah build, jalankan:
+
+```bash
+npm run preview
+```
+
+Default URL: `http://localhost:4173`
+
+---
+
+## 📂 Struktur Project (ringkas)
+
+```
+src/
+  routes/
+    +layout.svelte
+    +page.svelte
+    +page.ts
+static/
+  favicon.ico
+  illustration_flow_success.png
+  illustration_flow_session_berakhir.png
+.env.development
+.env.uat
+.env.production
+```
+
+---
