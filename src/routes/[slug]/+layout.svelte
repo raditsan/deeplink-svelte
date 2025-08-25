@@ -7,9 +7,13 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+		rel="stylesheet"
+	/>
 	<style>
       body {
-          font-family: Arial, sans-serif;
+          font-family: "Nunito", sans-serif;
           background-color: white;
           display: flex;
           justify-content: center;
